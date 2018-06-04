@@ -1,7 +1,8 @@
-## Used Libs: 
-- CoreUI
-- VueJS 
-- Laraver5 
+## Used libraries: 
+- Laravel 5 
+- CoreUI (https://coreui.io/)
+- VueJS (https://vuejs.org/)
+
 
 ### Cron command
 ````
@@ -9,14 +10,14 @@
 ````
 
 ## Run 
-Download docker repos -> https://github.com/ffphoenix/docker-for-laravel
+Download the docker git here  -> https://github.com/ffphoenix/docker-for-laravel
 
-Config docker & you project .env file 
+Config docker & your project .env file 
 ````
 docker-compose up 
 ````
 
-## Rostman tests file 
+## Postman collection file for API
 /tests/Laravel TEST.postman_collection.json
 
-## Prepared for API apidocjs.com
+## Prepared for apidocjs.com (http://apidocjs.com/)
