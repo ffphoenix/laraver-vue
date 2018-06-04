@@ -16,7 +16,6 @@ class CustomerController extends Controller
         $this->customerRep = $customerRepository;
     }
 
-
     /**
      * @api {post} /api/customer Create customer
      * @apiGroup Customer
@@ -24,8 +23,7 @@ class CustomerController extends Controller
      * @apiVersion 0.9.9
      *
      * @apiParam {sting} name Customer name
-     * @apiParam {email} email Customer email
-     * @apiParam {sting} username Customer username
+     * @apiParam {cnp} cnp Card not present
      * @apiParamExample {json} Request-Example:
      *     {
      *       "name": "Test Name",
@@ -35,7 +33,7 @@ class CustomerController extends Controller
      * @apiSuccessExample  {json} Success-Response:
      *     HTTP/1.1 200 OK
      *   {
-     *       "id":12
+     *       "customerId":12
      *   }
      *
      * @apiUse AuthHeader
@@ -47,7 +45,7 @@ class CustomerController extends Controller
     public function store(CustomerForm $request)
     {
         $customer = $this->customerRep->store($request->all());
-        return $request->json([ 'id' => $customer->id ]);
+        return [ 'customerId' => $customer->id ];
     }
 
     /**

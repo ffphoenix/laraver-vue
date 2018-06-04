@@ -1,0 +1,540 @@
+{
+	"id": "7ce27053-b554-1f5d-2563-2240201e9514",
+	"name": "Laravel TEST",
+	"description": "",
+	"order": [],
+	"folders": [
+		{
+			"id": "3d469fd5-5015-0724-381d-6116db8b58fb",
+			"name": "Authorization",
+			"description": "",
+			"order": [
+				"548c58d0-b778-9f97-21e7-744e48bbc03d"
+			],
+			"folders_order": [],
+			"owner": "678342",
+			"collectionId": "7ce27053-b554-1f5d-2563-2240201e9514"
+		},
+		{
+			"id": "e8ef3206-c290-e697-7ad1-6ecde82548f1",
+			"name": "Customer",
+			"description": "",
+			"order": [
+				"510344ad-5e02-e574-03dd-d4dbd59463e1"
+			],
+			"folders_order": [],
+			"owner": "678342",
+			"collectionId": "7ce27053-b554-1f5d-2563-2240201e9514"
+		},
+		{
+			"id": "96faa264-009c-1198-7b59-e850000c23cb",
+			"name": "Transaction",
+			"description": "",
+			"order": [
+				"9342b8af-91bb-8715-e5f8-bb096971f2cc",
+				"939024d3-57ec-bf84-7fe8-570c4378dc3b",
+				"35041216-779f-9145-1cd0-dacc1b7b6392",
+				"739bd2b9-6572-1cb3-2107-0c5b95b8cf6d",
+				"4c129d2e-a000-b346-ad37-777040743b4a"
+			],
+			"folders_order": [],
+			"owner": "678342",
+			"collectionId": "7ce27053-b554-1f5d-2563-2240201e9514"
+		}
+	],
+	"folders_order": [
+		"3d469fd5-5015-0724-381d-6116db8b58fb",
+		"e8ef3206-c290-e697-7ad1-6ecde82548f1",
+		"96faa264-009c-1198-7b59-e850000c23cb"
+	],
+	"timestamp": 1528104165787,
+	"owner": "678342",
+	"public": false,
+	"requests": [
+		{
+			"id": "35041216-779f-9145-1cd0-dacc1b7b6392",
+			"headers": "Content-Type: application/json\nAccept: {{Accept}}\nAuthorization: Bearer {{token}}\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Accept",
+					"value": "{{Accept}}",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{token}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{url}}/transaction",
+			"folder": "96faa264-009c-1198-7b59-e850000c23cb",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"tests": "tests[\"Status code is 201\"] = responseCode.code === 201;",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1528107457771,
+			"name": "Create ",
+			"description": "\n",
+			"collectionId": "7ce27053-b554-1f5d-2563-2240201e9514",
+			"responses": [
+				{
+					"owner": "678342",
+					"lastUpdatedBy": "678342",
+					"lastRevision": 3417836658,
+					"request": "35041216-779f-9145-1cd0-dacc1b7b6392",
+					"id": "8acfacbd-5f27-d393-c923-b9f09d9799b8",
+					"name": "Create Player / Wallet",
+					"status": "OK",
+					"responseCode": {
+						"code": 200,
+						"name": "OK",
+						"detail": ""
+					},
+					"time": null,
+					"headers": [],
+					"cookies": [],
+					"mime": null,
+					"text": "{\r\n    \"data\":{\r\n        \"id\":9211,\r\n      \"name\":\"APItest2\", \r\n      \"email\":\"rws.apitest2@yopmail.com\"\r\n    \"wallets\":[\r\n            {\r\n                \"uuid\":\"5EBA10DD-CF5F-D04B-F567-2A8E20DD1FC8\",\r\n                \"balance\":0,\r\n                \"currency\":{\r\n                    \"name\":\"USD\",\r\n                    \"symbol\":\"$\"\r\n                }\r\n            }\r\n        ]\r\n    }\r\n}",
+					"language": "Text",
+					"rawDataType": "text",
+					"requestObject": "\"adfbd082-610e-e788-a737-56c4ded49ae1\"",
+					"createdAt": "2018-03-15T12:11:41.000Z",
+					"updatedAt": "2018-03-15T12:11:41.000Z",
+					"write": true
+				}
+			],
+			"rawModeData": "{\n    \"customer_id\":\"33\", \n    \"amount\":\"9.99\"\n    \n}"
+		},
+		{
+			"id": "4c129d2e-a000-b346-ad37-777040743b4a",
+			"headers": "Content-Type: application/json\nAccept: {{Accept}}\nAuthorization: Bearer {{token}}\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Accept",
+					"value": "{{Accept}}",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{token}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{url}}/transaction/5",
+			"folder": "96faa264-009c-1198-7b59-e850000c23cb",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "DELETE",
+			"data": [],
+			"dataMode": "raw",
+			"tests": "tests[\"Status code is 201\"] = responseCode.code === 201;",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1528114895824,
+			"name": "Delete",
+			"description": "\n",
+			"collectionId": "7ce27053-b554-1f5d-2563-2240201e9514",
+			"responses": [
+				{
+					"owner": "678342",
+					"lastUpdatedBy": "678342",
+					"lastRevision": 3417836658,
+					"request": "4c129d2e-a000-b346-ad37-777040743b4a",
+					"id": "1085af5f-8720-fede-0047-e390fe1308c7",
+					"name": "Create Player / Wallet",
+					"status": "OK",
+					"responseCode": {
+						"code": 200,
+						"name": "OK",
+						"detail": ""
+					},
+					"time": null,
+					"headers": [],
+					"cookies": [],
+					"mime": null,
+					"text": "{\r\n    \"data\":{\r\n        \"id\":9211,\r\n      \"name\":\"APItest2\", \r\n      \"email\":\"rws.apitest2@yopmail.com\"\r\n    \"wallets\":[\r\n            {\r\n                \"uuid\":\"5EBA10DD-CF5F-D04B-F567-2A8E20DD1FC8\",\r\n                \"balance\":0,\r\n                \"currency\":{\r\n                    \"name\":\"USD\",\r\n                    \"symbol\":\"$\"\r\n                }\r\n            }\r\n        ]\r\n    }\r\n}",
+					"language": "Text",
+					"rawDataType": "text",
+					"requestObject": "\"adfbd082-610e-e788-a737-56c4ded49ae1\"",
+					"createdAt": "2018-03-15T12:11:41.000Z",
+					"updatedAt": "2018-03-15T12:11:41.000Z",
+					"write": true
+				}
+			],
+			"rawModeData": "{\n    \"name\":\"test-{{randhash}}\", \n    \"cnp\":\"bbb50097-2d88-3941-9152-{{randhash}}\"\n    \n}"
+		},
+		{
+			"id": "510344ad-5e02-e574-03dd-d4dbd59463e1",
+			"headers": "Content-Type: application/json\nAccept: {{Accept}}\nAuthorization: Bearer {{token}}\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Accept",
+					"value": "{{Accept}}",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{token}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{url}}/customer",
+			"folder": "e8ef3206-c290-e697-7ad1-6ecde82548f1",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"tests": "tests[\"Status code is 201\"] = responseCode.code === 201;",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1528114897679,
+			"name": "Create Customer",
+			"description": "\n",
+			"collectionId": "7ce27053-b554-1f5d-2563-2240201e9514",
+			"responses": [
+				{
+					"owner": "678342",
+					"lastUpdatedBy": "678342",
+					"lastRevision": 3417836658,
+					"request": "510344ad-5e02-e574-03dd-d4dbd59463e1",
+					"id": "5a114fea-d6a9-ac34-7d89-75a049e79f26",
+					"name": "Create Player / Wallet",
+					"status": "OK",
+					"responseCode": {
+						"code": 200,
+						"name": "OK",
+						"detail": ""
+					},
+					"time": null,
+					"headers": [],
+					"cookies": [],
+					"mime": null,
+					"text": "{\r\n    \"data\":{\r\n        \"id\":9211,\r\n      \"name\":\"APItest2\", \r\n      \"email\":\"rws.apitest2@yopmail.com\"\r\n    \"wallets\":[\r\n            {\r\n                \"uuid\":\"5EBA10DD-CF5F-D04B-F567-2A8E20DD1FC8\",\r\n                \"balance\":0,\r\n                \"currency\":{\r\n                    \"name\":\"USD\",\r\n                    \"symbol\":\"$\"\r\n                }\r\n            }\r\n        ]\r\n    }\r\n}",
+					"language": "Text",
+					"rawDataType": "text",
+					"requestObject": "\"adfbd082-610e-e788-a737-56c4ded49ae1\"",
+					"createdAt": "2018-03-15T12:11:41.000Z",
+					"updatedAt": "2018-03-15T12:11:41.000Z",
+					"write": true
+				}
+			],
+			"rawModeData": "{\n    \"name\":\"test-{{randhash}}\", \n    \"cnp\":\"bbb50092-2d88-3941-9152-{{randhash}}\"\n    \n}"
+		},
+		{
+			"id": "548c58d0-b778-9f97-21e7-744e48bbc03d",
+			"headers": "Accept: {{Accept}}\nContent-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Accept",
+					"value": "{{Accept}}",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{url}}/login",
+			"folder": "3d469fd5-5015-0724-381d-6116db8b58fb",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"tests": "var data = JSON.parse(responseBody);\npostman.setEnvironmentVariable(\"token\", data.token);",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1528114899457,
+			"name": "Get Authorization Token",
+			"description": "<h4>Parameters for Bearer Authentication flow:</h4>\n<ul>\n<li><code>provider_id</code> - Provider ID (required).</li>\n<li><code>provider_secret</code> - Secret token (required).</li>\n</ul>\n<p><strong>Note:</strong></p>\n<ul>\n<li>This request MUST be an HTTP <code>POST</code> request.</li>\n<li>This request MUST have <code>Accept</code> and <code>Content-Type</code> values in the http header set to <code>application/json</code>.</li>\n</ul>",
+			"collectionId": "7ce27053-b554-1f5d-2563-2240201e9514",
+			"responses": [
+				{
+					"owner": "678342",
+					"lastUpdatedBy": "678342",
+					"lastRevision": 3419093573,
+					"request": "548c58d0-b778-9f97-21e7-744e48bbc03d",
+					"id": "634e8a05-8850-7929-8d6f-85abcbb3b120",
+					"name": "Get Authorization Token",
+					"status": "OK",
+					"responseCode": {
+						"code": 200,
+						"name": "OK",
+						"detail": ""
+					},
+					"time": null,
+					"headers": [],
+					"cookies": [],
+					"mime": null,
+					"text": "{\r\n    \"data\":{\r\n        \"access_token\":\"U0FhlEAhikf5J504abtYxuWwzjEzsQD\",\r\n        \"access_token_expires\":\"2018-02-13 13:57:45\"\r\n    }\r\n}",
+					"language": "Text",
+					"rawDataType": "text",
+					"requestObject": "{\"id\":\"8bbe2ae6-1ee0-4858-af6b-5b0169a34afd\",\"description\":\"\",\"method\":\"POST\",\"headers\":\"Accept: {{Accept}}\\nContent-Type: application/json\",\"dataMode\":\"raw\",\"data\":[],\"rawModeData\":\"{\\n    \\\"provider_id\\\":\\\"12\\\", \\n    \\\"provider_secret\\\":\\\"twp1tLwKvHWsRl6IpBPtDQzcm18azXVT\\\"\\n}\",\"url\":\"{{url}}/login\",\"queryParams\":[],\"headerData\":[{\"key\":\"Accept\",\"value\":\"{{Accept}}\"},{\"key\":\"Content-Type\",\"value\":\"application/json\"}]}",
+					"createdAt": "2018-03-15T14:21:19.000Z",
+					"updatedAt": "2018-03-15T14:21:20.000Z",
+					"write": true
+				}
+			],
+			"rawModeData": "{\n    \"username\":\"admin\", \n    \"password\":\"123456\"\n}"
+		},
+		{
+			"id": "739bd2b9-6572-1cb3-2107-0c5b95b8cf6d",
+			"headers": "Content-Type: application/json\nAccept: {{Accept}}\nAuthorization: Bearer {{token}}\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Accept",
+					"value": "{{Accept}}",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{token}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{url}}/transaction/4",
+			"folder": "96faa264-009c-1198-7b59-e850000c23cb",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "PUT",
+			"data": [],
+			"dataMode": "raw",
+			"tests": "tests[\"Status code is 201\"] = responseCode.code === 201;",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1528114896687,
+			"name": "Update",
+			"description": "\n",
+			"collectionId": "7ce27053-b554-1f5d-2563-2240201e9514",
+			"responses": [
+				{
+					"owner": "678342",
+					"lastUpdatedBy": "678342",
+					"lastRevision": 3417836658,
+					"request": "739bd2b9-6572-1cb3-2107-0c5b95b8cf6d",
+					"id": "1893b275-bbc9-d765-06df-344efa5dd73b",
+					"name": "Create Player / Wallet",
+					"status": "OK",
+					"responseCode": {
+						"code": 200,
+						"name": "OK",
+						"detail": ""
+					},
+					"time": null,
+					"headers": [],
+					"cookies": [],
+					"mime": null,
+					"text": "{\r\n    \"data\":{\r\n        \"id\":9211,\r\n      \"name\":\"APItest2\", \r\n      \"email\":\"rws.apitest2@yopmail.com\"\r\n    \"wallets\":[\r\n            {\r\n                \"uuid\":\"5EBA10DD-CF5F-D04B-F567-2A8E20DD1FC8\",\r\n                \"balance\":0,\r\n                \"currency\":{\r\n                    \"name\":\"USD\",\r\n                    \"symbol\":\"$\"\r\n                }\r\n            }\r\n        ]\r\n    }\r\n}",
+					"language": "Text",
+					"rawDataType": "text",
+					"requestObject": "\"adfbd082-610e-e788-a737-56c4ded49ae1\"",
+					"createdAt": "2018-03-15T12:11:41.000Z",
+					"updatedAt": "2018-03-15T12:11:41.000Z",
+					"write": true
+				}
+			],
+			"rawModeData": "{\n    \"amount\":\"33.99\"\n}"
+		},
+		{
+			"id": "9342b8af-91bb-8715-e5f8-bb096971f2cc",
+			"headers": "Content-Type: application/json\nAccept: {{Accept}}\nAuthorization: Bearer {{token}}\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Accept",
+					"value": "{{Accept}}",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{token}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{url}}/transaction/33/2",
+			"folder": "96faa264-009c-1198-7b59-e850000c23cb",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": [],
+			"dataMode": "raw",
+			"tests": "tests[\"Status code is 201\"] = responseCode.code === 201;",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1528114888722,
+			"name": "get one",
+			"description": "\n",
+			"collectionId": "7ce27053-b554-1f5d-2563-2240201e9514",
+			"responses": [
+				{
+					"owner": "678342",
+					"lastUpdatedBy": "678342",
+					"lastRevision": 3417836658,
+					"request": "9342b8af-91bb-8715-e5f8-bb096971f2cc",
+					"id": "919748b3-7e05-cd43-e489-a86efedf6799",
+					"name": "Create Player / Wallet",
+					"status": "OK",
+					"responseCode": {
+						"code": 200,
+						"name": "OK",
+						"detail": ""
+					},
+					"time": null,
+					"headers": [],
+					"cookies": [],
+					"mime": null,
+					"text": "{\r\n    \"data\":{\r\n        \"id\":9211,\r\n      \"name\":\"APItest2\", \r\n      \"email\":\"rws.apitest2@yopmail.com\"\r\n    \"wallets\":[\r\n            {\r\n                \"uuid\":\"5EBA10DD-CF5F-D04B-F567-2A8E20DD1FC8\",\r\n                \"balance\":0,\r\n                \"currency\":{\r\n                    \"name\":\"USD\",\r\n                    \"symbol\":\"$\"\r\n                }\r\n            }\r\n        ]\r\n    }\r\n}",
+					"language": "Text",
+					"rawDataType": "text",
+					"requestObject": "\"adfbd082-610e-e788-a737-56c4ded49ae1\"",
+					"createdAt": "2018-03-15T12:11:41.000Z",
+					"updatedAt": "2018-03-15T12:11:41.000Z",
+					"write": true
+				}
+			],
+			"rawModeData": "{\n    \"customer_id\":\"33\", \n    \"amount\":\"9.99\"\n    \n}"
+		},
+		{
+			"id": "939024d3-57ec-bf84-7fe8-570c4378dc3b",
+			"headers": "Content-Type: application/json\nAccept: {{Accept}}\nAuthorization: Bearer {{token}}\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Accept",
+					"value": "{{Accept}}",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{token}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{url}}/transaction?customerId=33&date=04-06-2018",
+			"folder": "96faa264-009c-1198-7b59-e850000c23cb",
+			"queryParams": [
+				{
+					"key": "customerId",
+					"value": "33",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "date",
+					"value": "04-06-2018",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": [],
+			"dataMode": "raw",
+			"tests": "tests[\"Status code is 201\"] = responseCode.code === 201;",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1528114876363,
+			"name": "get list",
+			"description": "\n",
+			"collectionId": "7ce27053-b554-1f5d-2563-2240201e9514",
+			"responses": [
+				{
+					"owner": "678342",
+					"lastUpdatedBy": "678342",
+					"lastRevision": 3417836658,
+					"request": "939024d3-57ec-bf84-7fe8-570c4378dc3b",
+					"id": "95c5196c-885c-503f-5051-e2a23ae96a86",
+					"name": "Create Player / Wallet",
+					"status": "OK",
+					"responseCode": {
+						"code": 200,
+						"name": "OK",
+						"detail": ""
+					},
+					"time": null,
+					"headers": [],
+					"cookies": [],
+					"mime": null,
+					"text": "{\r\n    \"data\":{\r\n        \"id\":9211,\r\n      \"name\":\"APItest2\", \r\n      \"email\":\"rws.apitest2@yopmail.com\"\r\n    \"wallets\":[\r\n            {\r\n                \"uuid\":\"5EBA10DD-CF5F-D04B-F567-2A8E20DD1FC8\",\r\n                \"balance\":0,\r\n                \"currency\":{\r\n                    \"name\":\"USD\",\r\n                    \"symbol\":\"$\"\r\n                }\r\n            }\r\n        ]\r\n    }\r\n}",
+					"language": "Text",
+					"rawDataType": "text",
+					"requestObject": "\"adfbd082-610e-e788-a737-56c4ded49ae1\"",
+					"createdAt": "2018-03-15T12:11:41.000Z",
+					"updatedAt": "2018-03-15T12:11:41.000Z",
+					"write": true
+				}
+			],
+			"rawModeData": "{\n    \"customer_id\":\"33\", \n    \"amount\":\"9.99\"\n    \n}"
+		}
+	]
+}

@@ -177,6 +177,7 @@ return [
 //        App\Providers\RouteServiceProvider::class,
 
         Backoffice\Providers\AppServiceProvider::class,
+        Api\Providers\AppServiceProvider::class,
     ],
 
     /*

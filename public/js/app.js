@@ -33225,6 +33225,7 @@ var OBSERVER_CONFIG = {
 //
 //
 //
+//
 
 
 
@@ -73400,6 +73401,22 @@ var render = function() {
                       {
                         staticClass: "sorting",
                         class: [
+                          _vm.filter.sort == "customer_id" ? _vm.filter.dir : ""
+                        ],
+                        on: {
+                          click: function($event) {
+                            _vm.sortCol("customer_id")
+                          }
+                        }
+                      },
+                      [_vm._v("Customer")]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "th",
+                      {
+                        staticClass: "sorting",
+                        class: [
                           _vm.filter.sort == "amount" ? _vm.filter.dir : ""
                         ],
                         on: {
@@ -73411,37 +73428,7 @@ var render = function() {
                       [_vm._v("Amount")]
                     ),
                     _vm._v(" "),
-                    _c(
-                      "th",
-                      {
-                        staticClass: "sorting",
-                        class: [
-                          _vm.filter.sort == "type" ? _vm.filter.dir : ""
-                        ],
-                        on: {
-                          click: function($event) {
-                            _vm.sortCol("type")
-                          }
-                        }
-                      },
-                      [_vm._v("Type")]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "th",
-                      {
-                        staticClass: "sorting",
-                        class: [
-                          _vm.filter.sort == "currency_id" ? _vm.filter.dir : ""
-                        ],
-                        on: {
-                          click: function($event) {
-                            _vm.sortCol("currency_id")
-                          }
-                        }
-                      },
-                      [_vm._v("Status")]
-                    ),
+                    _c("th", [_vm._v("Status")]),
                     _vm._v(" "),
                     _c(
                       "th",
@@ -73467,17 +73454,17 @@ var render = function() {
                     return _c("tr", [
                       _c("td", [_vm._v("#" + _vm._s(rowData.id))]),
                       _vm._v(" "),
+                      _c("td", [_vm._v(_vm._s(rowData.customer.name))]),
+                      _vm._v(" "),
                       _c("td", [
                         _vm._v(
                           _vm._s(rowData.amount) +
-                            _vm._s(rowData.debitwallet.currency.symbol) +
+                            _vm._s(rowData.currency.symbol) +
                             "(" +
-                            _vm._s(rowData.debitwallet.currency.code) +
+                            _vm._s(rowData.currency.code) +
                             ")"
                         )
                       ]),
-                      _vm._v(" "),
-                      _c("td", [_vm._v(_vm._s(rowData.type))]),
                       _vm._v(" "),
                       _c("td", [_vm._v(_vm._s(rowData.status))]),
                       _vm._v(" "),

@@ -18,8 +18,14 @@ class TransactionResource extends Resource
         return [
             'id'                      => $this->id,
             'amount'                  => $this->getAmount(),
+            'currency' => [
+                'code' => $this->currency->code,
+                'symbol' => $this->currency->symbol,
+            ],
+            'customer' => [
+                'name' =>$this->customer->name
+            ],
             'status'                  => $this->status,
-            'type'                    => $this->type,
             'created_at'              => date('Y-m-d H:i:s', strtotime($this->created_at)),
         ];
     }

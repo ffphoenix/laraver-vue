@@ -25,17 +25,18 @@
                             <thead>
                                 <tr>
                                     <th class="sorting" v-on:click="sortCol('id')" v-bind:class="[filter.sort == 'id' ? filter.dir : '']">#ID</th>
+
+                                    <th class="sorting" v-on:click="sortCol('customer_id')" v-bind:class="[filter.sort == 'customer_id' ? filter.dir : '']">Customer</th>
                                     <th class="sorting" v-on:click="sortCol('amount')" v-bind:class="[filter.sort == 'amount' ? filter.dir : '']">Amount</th>
-                                    <th class="sorting" v-on:click="sortCol('type')" v-bind:class="[filter.sort == 'type' ? filter.dir : '']">Type</th>
-                                    <th class="sorting" v-on:click="sortCol('currency_id')" v-bind:class="[filter.sort == 'currency_id' ? filter.dir : '']">Status</th>
+                                    <th>Status</th>
                                     <th class="sorting" v-on:click="sortCol('created_at')" v-bind:class="[filter.sort == 'created_at' ? filter.dir : '']">Date</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr v-for="rowData, index in listData">
                                     <td>#{{rowData.id}}</td>
-                                    <td>{{rowData.amount}}{{rowData.debitwallet.currency.symbol}}({{rowData.debitwallet.currency.code}})</td>
-                                    <td>{{rowData.type}}</td>
+                                    <td>{{rowData.customer.name}}</td>
+                                    <td>{{rowData.amount}}{{rowData.currency.symbol}}({{rowData.currency.code}})</td>
                                     <td>{{rowData.status}}</td>
                                     <td>{{rowData.created_at}}</td>
                                 </tr>

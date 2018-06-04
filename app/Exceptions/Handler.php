@@ -51,18 +51,17 @@ class Handler extends ExceptionHandler
     public function render($request, Exception $exception)
     {
         if ($exception instanceof BadRequestException) {
+
             $error = [
                 'code' => $exception->getStatusCode(),
                 'message' => $exception->getMessage()
             ];
-
             if ($exception->getDetails()) {
                 $error['details'] = $exception->getDetails();
             }
 
             return response()->json(['error' => $error], $exception->getCode());
         }
-
         if ($exception instanceof BaseException) {
             $error = ['error' => ['code' => $exception->getStatusCode(), 'message' => $exception->getMessage()]];
             return response()->json($error, $exception->getCode());
@@ -82,7 +81,6 @@ class Handler extends ExceptionHandler
             if ($exception instanceof ModelNotFoundException) {
                 return response()->json(['error' => 1, 'data' => 'Resource not found'], 404);
             }
-            dd($exception);
             return response()->json(['error' => [
                 'data' => $exception->getMessage(),
                 'error' => $exception->getFile() .' : ' . $exception->getLine(),

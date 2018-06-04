@@ -15,13 +15,25 @@ class Transaction extends Model
      */
     protected $table = 'transactions';
 
+
+    /**
+     * The attributes that should be mutated to dates.
+     *
+     * @var array
+     */
+    protected $dates = ['created_at', 'updated_at', 'deleted_at'];
+
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
+    protected $fillable = ['id', 'customer_id', 'amount', 'status', 'currency_id'];
+
     const TRANSFER_STATUS_SUCCEEDED = 'succeeded';
 
     const TRANSFER_TYPE_TRANSFER = 'transfer';
     const TRANSFER_TYPE_REVERSE = 'reverse';
-    const TRANSFER_TYPE_MONEY_IN = 'money_in';
-    const TRANSFER_TYPE_MONEY_OUT = 'money_out';
-
 
     public static function convertSum($amount, $toDbValues = true)
     {
@@ -32,5 +44,16 @@ class Transaction extends Model
     {
         return self::convertSum($this->amount, false);
     }
+
+    public function customer()
+    {
+        return $this->belongsTo(Customer::class, 'customer_id')->withTrashed();
+    }
+
+    public function currency()
+    {
+        return $this->belongsTo(Currency::class, 'currency_id')->withTrashed();
+    }
+
 
 }
